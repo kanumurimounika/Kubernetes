@@ -1,0 +1,85 @@
+# KOPS – Kubernetes Cluster Management
+
+## 📌 What is KOPS?
+
+KOPS (Kubernetes Operations) is a tool used to create, manage, and operate Kubernetes clusters.
+
+It simplifies cluster management by automating infrastructure setup in cloud environments like AWS.
+
+---
+
+## 📌 Why Do We Need KOPS?
+
+In real-world projects:
+- We don't manage just one cluster
+- There are multiple clusters across environments (Dev, QA, Prod)
+
+Manual management becomes:
+- Difficult
+- Error-prone
+- Not scalable
+
+KOPS solves this problem using automation.
+
+---
+
+## 📌 How KOPS Works
+
+1. User provides cluster configuration  
+2. Configuration is stored in S3 (state store)  
+3. KOPS reads configuration  
+4. KOPS creates infrastructure in AWS  
+5. Kubernetes cluster is set up automatically  
+
+---
+
+## 📌 Key Components
+
+### ✅ KOPS CLI
+- Interface to manage clusters
+
+### ✅ S3 Bucket (State Store)
+- Stores cluster configuration
+- Acts as a source of truth
+
+### ✅ AWS Infrastructure
+- EC2 instances
+- Networking
+- Load balancers
+
+### ✅ Kubernetes Cluster
+- Master Node (Control Plane)
+- Worker Nodes (Applications run here)
+
+---
+
+## 📌 Architecture Flow
+
+User → KOPS → S3 → AWS → Kubernetes Cluster
+
+---
+
+## 📌 Benefits of KOPS
+
+- Automation of cluster setup  
+- Easy to scale  
+- Repeatable configuration  
+- Suitable for production environments  
+
+---
+
+## 📌 Real-Time Example
+
+A company may have:
+- Dev cluster (small)
+- QA cluster (medium)
+- Production cluster (large)
+
+KOPS helps manage all these clusters efficiently.
+
+---
+
+## 📌 Summary
+
+KOPS is a tool that automates Kubernetes cluster creation and management using Infrastructure as Code, mainly on AWS, with configuration stored in S3.
+
