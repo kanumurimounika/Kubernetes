@@ -1,5 +1,3 @@
-# KOPS – Kubernetes Cluster Management
-
 ## 📌 What is KOPS?
 
 KOPS (Kubernetes Operations) is a tool used to create, manage, and operate Kubernetes clusters.
