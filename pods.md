@@ -151,6 +151,28 @@ NGINX app:
 
 ## 📊 Architecture
 
-        ☸ Kubernetes Cluster
+      
+☸ Kubernetes Cluster
                 |
     -------------------------
+    |                       |
+ 📦 Pod 1               📦 Pod 2
+    |                       |
+ 🐳 Container         🐳 Container
+
+---
+
+## ⚡ Quick Revision
+
+- Pod = smallest unit  
+- Kubernetes uses Pods  
+- Pod contains container  
+- Temporary  
+- Has IP  
+
+---
+
+## 🎯 One-line
+
+> ✅ Pod = smallest unit that runs containers in Kubernetes
+
