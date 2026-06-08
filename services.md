@@ -198,3 +198,106 @@ You always access the Service.
 ## 🎯 One-Line Summary
 
 > ✅ Kubernetes Service provides a stable endpoint and load balancing to access dynamic Pods inside a cluster
+
+# ⚙️ Kubernetes Service Commands
+
+---
+
+## 🚀 Create Service
+
+Apply YAML file:
+
+    kubectl apply -f service.yaml
+
+---
+
+## 📃 List Services
+
+    kubectl get services
+
+OR
+
+    kubectl get svc
+
+---
+
+## 📃 Detailed Output
+
+    kubectl get svc -o wide
+
+---
+
+## 🔍 Describe Service (Very Important)
+
+    kubectl describe service service-name
+
+👉 Shows:
+- ClusterIP  
+- NodePort  
+- Endpoints (connected Pods)  
+
+---
+
+## 🔁 Watch Services (Real-Time)
+
+    kubectl get svc -w
+
+---
+
+## ❌ Delete Service
+
+    kubectl delete service service-name
+
+OR
+
+    kubectl delete -f service.yaml
+
+---
+
+## 📦 Check Connected Pods
+
+    kubectl get endpoints
+
+👉 Shows which Pods are linked to Service  
+
+---
+
+## 🔄 Edit Service
+
+    kubectl edit svc service-name
+
+---
+
+## 🌐 Access ClusterIP Service (Internal Only)
+
+Inside cluster:
+
+    kubectl exec -it pod-name -- curl http://service-name
+
+---
+
+## 🌐 Access NodePort Service
+
+    http://NodeIP:Port
+
+---
+
+## 🌐 Access LoadBalancer Service
+
+    kubectl get svc
+
+👉 Look for EXTERNAL-IP  
+
+---
+
+## ⚡ Quick Workflow
+
+    Apply → kubectl apply -f service.yaml  
+    List → kubectl get svc  
+    Check → kubectl describe svc  
+    Watch → kubectl get svc -w  
+    Delete → kubectl delete svc  
+
+---
+
+
