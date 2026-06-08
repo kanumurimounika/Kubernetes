@@ -74,6 +74,8 @@ The Service distributes traffic automatically:
 
 ---
 
+A NodePort Service routes traffic only to Pods whose labels match its selector, even if those Pods belong to different deployments
+
 ## 📄 NodePort YAML
 
 ```yaml
