@@ -11,6 +11,8 @@ Dependencies required
 2. AWS CLI
 3. kubectl
 
+
+
 ###  Install dependencies
 
 
