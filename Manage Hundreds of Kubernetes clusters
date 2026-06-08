@@ -83,3 +83,27 @@ KOPS helps manage all these clusters efficiently.
 
 KOPS is a tool that automates Kubernetes cluster creation and management using Infrastructure as Code, mainly on AWS, with configuration stored in S3.
 
+# KOPS Architecture
+
+## Flow Diagram
+
+User → KOPS → S3 → AWS → Kubernetes Cluster
+
+---
+
+## Explanation
+
+- User interacts with KOPS CLI
+- KOPS stores configuration in S3
+- KOPS reads configuration and creates AWS resources
+- Kubernetes cluster is created with master and worker nodes
+
+---
+
+## Key Idea
+
+S3 acts as the brain (state store)  
+KOPS acts as the controller  
+AWS provides infrastructure  
+Kubernetes runs applications  
+
