@@ -1,0 +1,13 @@
+Kubernetes Deployment Strategies 
+
+When we deploy a new version of an application:
+
+❌ We cannot stop the app completely (downtime is bad)
+✅ We need safe deployment strategies
+
+
+Kubernetes provides multiple strategies to:
+
+Maintain availability
+Reduce risk
+Allow rollback
