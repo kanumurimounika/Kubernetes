@@ -192,3 +192,25 @@ NGINX app:
 
 ---
 
+# 📦 Kubernetes Pod YAML
+
+---
+
+## 📄 Pod YAML
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+    ports:
+    - containerPort: 80
+``
+
