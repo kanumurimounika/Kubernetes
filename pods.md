@@ -176,3 +176,19 @@ NGINX app:
 
 > ✅ Pod = smallest unit that runs containers in Kubernetes
 
+## ⚡Pod:
+- Manual creation
+- No auto-restart if crashes
+- No auto-scaling
+- Good for learning
+
+---
+
+## ⚡Deployment (Tomorrow's topic!):
+- Automatic management
+- Auto-healing (restarts crashed Pods)
+- Auto-scaling (creates more Pods)
+- Production-ready!
+
+---
+
