@@ -35,41 +35,6 @@ When you create a LoadBalancer Service:
 
 ---
 
-## 🔥 Internal Flow (Deep Understanding)
-
-LoadBalancer internally uses multiple layers:
-
-    User
-      ↓
-Cloud Load Balancer (Public IP)
-      ↓
-Node (NodePort internally)
-      ↓
-ClusterIP Service
-      ↓
-Pods
-
-👉 Even though you see only LoadBalancer, internally it also uses NodePort and ClusterIP.
-
----
-
-## 📊 Flow Diagram
-
-    🌍 User
-       ↓
- Public IP (Cloud Load Balancer)
-       ↓
-   Node (Port Routing)
-       ↓
-     🌐 Service
-       ↓
-  -----------------------
-  |        |           |
- 📦 Pod1  Pod2      Pod3
-       ↓
-    🐳 Application
-
----
 
 ## 📌 Real Example
 
@@ -82,6 +47,65 @@ User accesses:
     http://18.100.25.10
 
 ---
+
+## 🔥 Internal Flow (Visual)
+
+    🌍 USER REQUEST
+           |
+           v
+    ☁ Cloud Load Balancer
+    (Public IP Assigned)
+           |
+           v
+    🖥 Kubernetes Node
+    (NodePort internally)
+           |
+           v
+    🌐 Service (ClusterIP)
+    (routes using labels)
+           |
+           v
+    |          |           |
+   Pod1      Pod2        Pod3
+           |
+           v
+        🐳 App
+
+---
+
+## 🔁 Multi-Layer Flow
+
+    User (Internet)
+        |
+        v
+    Public IP (LoadBalancer)
+        |
+        v
+    Node Level (NodePort)
+        |
+        v
+    Service Layer (ClusterIP)
+        |
+        v
+    Pods
+
+---
+
+## ⚖️ Load Balancing Flow
+
+    USER TRAFFIC
+        |
+        v
+    LoadBalancer
+      /     \
+     v       v
+    Node1    Node2
+    /        \
+    v        v
+  Pod1     Pod2
+
+---
+ 
 
 ## 🔁 Traffic Distribution
 
